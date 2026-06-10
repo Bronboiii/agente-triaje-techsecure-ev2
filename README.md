@@ -1,4 +1,4 @@
-agente-triaje-techsecure-ev2
+Agente-triaje-techsecure-ev2
 TechSecure Solution: Agente RAG Autónomo con Memoria Híbrida y Triaje Adaptativo (EV2)
 
 Este repositorio contiene la implementación del Agente Supervisor de ciberseguridad para la Evaluación Parcial N°2. El sistema automatiza el triaje, priorización y mitigación de alertas de seguridad (CVE).
@@ -17,6 +17,3 @@ Guía de Pruebas y Decisiones Adaptativas
 ### Preparación del entorno:
 ```bash
 pip install -r requirements.txt
-
-## Ejecución de Escenarios de Prueba obligatorios:
-Escenario A (Activo Crítico en DMZ): El agente elevará la prioridad a CRÍTICA y exigirá parcheo en < 24 horas de acuerdo a la política.
