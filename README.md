@@ -17,3 +17,17 @@ Guía de Pruebas y Decisiones Adaptativas
 ### Preparación del entorno:
 ```bash
 pip install -r requirements.txt
+```
+Ejecución de Escenarios de Prueba obligatorios:
+Escenario A (Activo Crítico en DMZ): El agente elevará la prioridad a CRÍTICA y exigirá parcheo en < 24 horas de acuerdo a la política.
+```bash
+python main.py --cve CVE-2024-1234 --software "Apache httpd"
+```
+Escenario B (Activo Interno en Desarrollo): El agente adaptará su comportamiento a prioridad MEDIA y mitigación local por IPTables.
+```bash
+python main.py --cve CVE-2024-1234 --software "PostgreSQL"
+```
+Escenario C (Falso Positivo): El agente detectará que el activo no existe y abortará el flujo de forma autónoma.
+```bash
+python main.py --cve CVE-2024-5555 --software "Windows Server"
+```
